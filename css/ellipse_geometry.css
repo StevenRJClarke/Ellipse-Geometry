@@ -1,0 +1,129 @@
+/*Layout*/
+.widget-content {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-bottom: 50px;
+  width: 80%;
+}
+.widget-section {
+  border-bottom: 2px solid #f9f9f9;
+  margin: 0 2em 1em 2em;
+  padding-bottom: 1em;
+}
+.widget-section:last-of-type {
+  border-bottom: none;
+}
+.widget-canvas {
+  display: flex;
+  flex-wrap: wrap;
+}
+.left-column {
+  padding: 1em;
+}
+.right-column {
+  padding: 1em;
+  width: 50%;
+}
+
+/*Instructions*/
+.instructions {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.general {
+  height: 50%;
+  margin-bottom: 1em;
+  width: 50%
+}
+.step-by-step {
+  height: 50%;
+  width: 50%
+}
+.instruction-step {
+  border: 1px solid #2193b0;
+  border-radius: 25px;
+  color: #2193b0;
+  font-size: 1.2em;
+}
+
+/*Canvas*/
+#canvas {
+  background: #f9f9f9;
+  box-shadow: 0.5em 0.5em 0.5em #ddd;
+}
+
+/*Input/Output*/
+.grouped-inputs {
+  border: solid 1px #ddd;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+.semi-major-axis, .semi-minor-axis, .major-axis, .minor-axis, .area {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+.required {
+  border-color: red;
+}
+.required::placeholder {
+  color: red;
+}
+
+/*Clear button*/
+.clear-button {
+  border: none;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em 0.5em #ddd;
+  color: white;
+  font: bold 1.2em 'Lato', sans-serif;
+  margin: 1em;
+  padding: 0.8em;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1200px) {
+  /*Layout*/
+  .intro {
+    display: none;
+  }
+  .widget-content {
+    width: 100%;
+  }
+  .right-column {
+    width: 100%;
+  }
+
+  /*Instructions*/
+  .general {
+    display: none;
+  }
+  .step-by-step {
+    height: 100%;
+    width: 100%;
+  }
+
+  /*Input/Output*/
+  .output-image {
+    display: none;
+  }
+  .workings {
+    display: none;
+  }
+  input {
+    height: 45px;
+    margin-left: 10px;
+    width: 200px;
+  }
+
+  /*Clear button*/
+  .clear-button {
+    font: bold 1em 'Lato', sans-serif;
+    margin: 1.5em 0 0.5em 0;
+    padding: 0.5em;
+  }
+}

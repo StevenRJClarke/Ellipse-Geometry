@@ -1,0 +1,244 @@
+@media screen and (max-width: 700px) {
+
+  h1 {
+    font-size: 1.2em;
+  }
+  h2 {
+    font-size: 1.1em;
+  }
+  h3 {
+    font-size:  1em;
+  }
+  header {
+    justify-content: flex-end;
+  }
+  footer {
+    font-size: 0.8em;
+  }
+  input[type=search] {
+    padding: 0.3em;
+  }
+
+  /*Header CSS*/
+  .header-icons {
+    font-size: 1.6em;
+  }
+  .header-button {
+    display: none;
+  }
+
+  /*Navigation CSS*/
+  .nav {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  .hide-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .drop-down {
+    width: 100%;
+  }
+  .drop-down-content {
+    background: rgb(100, 100, 100);
+    color: white;
+  }
+  .drop-down-list {
+    border-bottom: 1px solid #c8c8c8;
+  }
+  .drop-down-list:last-of-type {
+    border-bottom: none;
+  }
+  .drop-down-link {
+    color: white;
+  }
+
+  /*Formatting*/
+  .sub-section {
+    margin-left: 0.75em;
+    padding: 0.25em 0.5em;
+  }
+
+  /*Curriculum CSS*/
+  .curriculum, .collapse {
+    display: none;
+  }
+
+  /*Main Container CSS*/
+  .main-container {
+    width: 100%;
+  }
+
+  /*Main Content CSS*/
+  .main-content {
+    padding: 1em;
+    width: 100%;
+  }
+
+  /*Examples section*/
+
+  /*Questions*/
+  .question {
+    padding: 1em;
+  }
+
+  /*Steps*/
+  .circle-background {
+    font-size: 1.2em;
+    height: 2em;
+    width: 2em;
+  }
+
+  /*Sidebar CSS*/
+  .sidebar-content {
+    order: 1;
+    width: 100%;
+  }
+
+  /*Test CSS*/
+  .print-test-area {
+    width: 100%;
+  }
+
+  /*Footer CSS*/
+  .previous-lesson-title, .next-lesson-title {
+    display: none;
+  }
+
+  /*Parent Page CSS*/
+
+  /*Mini-curriculum CSS*/
+  .mini-curriculum-intro-image {
+    display: none;
+  }
+  .mini-curriculum-intro-text {
+    width: 100%;
+  }
+
+  /*Sidebar Curriculum CSS*/
+  .sidebar-curriculum {
+    order: 1;
+    width: 100%;
+  }
+
+  /* Home Page CSS */
+  .home-content {
+    background: url(../images/background.png) 0 0 repeat, #f9fbff;
+    width: 100%;
+  }
+  .home-text {
+    display: none;
+  }
+  .front, .back {
+    height: 10em;
+    justify-content: center;
+    margin: 0.5em;
+  }
+  .front {
+    background: url(../images/background_4.png) 0 0 repeat, #6dd5ed;
+    background: url(../images/background_4.png) 0 0 repeat, -webkit-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Safari 5.1 to 6.0 */
+    background: url(../images/background_4.png) 0 0 repeat, -o-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Opera 11.1 to 12.0 */
+    background: url(../images/background_4.png) 0 0 repeat, -moz-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Firefox 3.6 to 15 */
+    background: url(../images/background_4.png) 0 0 repeat, linear-gradient(135deg, #2193b0, #6dd5ed); /* Standard syntax */
+  }
+  .back {
+    background: url(../images/background_4.png) 0 0 repeat, #02ccba;
+  }
+  .curriculum-box-title {
+    font-size: 2em;
+  }
+  .curriculum-box-text {
+    display: none;
+  }
+  .curriculum-box-image {
+    display: none;
+  }
+  .curriculum-box-link-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 1200px) {
+  h1 {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  header {
+    justify-content: flex-end;
+  }
+  footer {
+    font-size: 1.1em;
+  }
+
+  /*Navigation CSS*/
+  .drop-down {
+    width: calc(100% / 6);
+  }
+  .drop-down-button {
+    font-size: 1em;
+  }
+  .home-button, .graphs-button, .trigonometry-button {
+    display: none;
+  }
+
+  /*Curriculum CSS*/
+  .curriculum-button {
+    padding: 0.5em;
+  }
+  .curriculum-link {
+    font-size: 1em;
+  }
+  .collapse {
+    background: white;
+    font-size: 1.5em;
+  }
+
+  /*Main Content CSS*/
+  .main-content {
+    box-shadow: none;
+    width: 100%;
+  }
+
+  /*Sidebar CSS*/
+  .sidebar-content {
+    order: 1;
+    width: 100%;
+  }
+
+  /*Test CSS*/
+  .print-test-area {
+    width: 100%;
+  }
+
+  /*Footer CSS*/
+  .previous-lesson-title, .next-lesson-title {
+    display: none;
+  }
+
+  /*Parent Page CSS*/
+
+  /*Sidebar Curriculum CSS*/
+  .sidebar-curriculum {
+    order: 1;
+    width: 100%;
+  }
+
+  /*Home Page CSS*/
+  .home-content {
+    background: url(../images/background.png) 0 0 repeat, #f9fbff;
+    width: 100%;
+  }
+  .home-text {
+    display: none;
+  }
+  .front, .back {
+    justify-content: center;
+  }
+  .curriculum-box-image {
+    display: none;
+  }
+}

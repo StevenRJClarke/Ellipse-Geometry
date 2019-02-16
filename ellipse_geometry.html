@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Ellipse Geometry - free Mathematics lessons and tests</title>
+
+  <!-- Start of meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is an app to find the semi-major axis, semi-minor axis, major axis, minor axis and area of an ellipse.">
+  <meta name="keywords" content="Ellipses, ellipse, semi-major axis, semi-minor axis, major axis, minor axis, area"/>
+  <!-- End of meta -->
+
+  <!--Start of Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+  <!-- Start of CSS -->
+  <link rel="styleSheet" type="text/css" href="css/main.css">
+  <link rel="styleSheet" type="text/css" href="css/responsive.css">
+  <link rel="styleSheet" type="text/css" href="css/ellipse_geometry.css">
+  <!-- End of CSS -->
+  <!-- End of links -->
+
+  <!-- Start of scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script  src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+  integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+  crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/c3bcd475bc.js"></script>
+  <!-- End of scripts -->
+</head>
+
+<body>
+
+<header class="gradient-background">
+</header>
+
+<!-- Start of container div -->
+<div class="container" id="contain">
+
+  <!-- Start of Main Container -->
+  <div class="main-container max-width">
+
+    <!-- Start of Widget Content -->
+
+    <div class="widget-content">
+      <h1 class="text-centred">Ellipse Geometry</h1>
+
+      <!-- Start of Widget Intro -->
+      <section class="intro widget-section">
+        <p>An ellipse is a shape like a flattened circle.</p>
+
+        <p>An ellipse has some important dimensions: the major axis and the minor axis, which when halved give the semi-major axis and semi-minor axis. It also has an area, which is the amount of space contained by an ellipse.</p>
+
+        <img src="images/ellipse_dimensions.png" />
+
+        <p>This widget allows you to find the semi-major axis, semi-minor axis, major axis, minor axis and area of an ellipse.</p>
+      </section>
+      <!-- End of Widget Intro -->
+
+      <section class="widget-section">
+        <h2>Learn About Ellipse Geometry</h2>
+
+        <div class="instructions">
+          <div class="general">
+            <p>Draw an ellipse by:</p>
+
+            <ul>
+              <li>Clicking on the canvas, or</li>
+              <li>Entering <u>both</u> the semi-major and semi-minor axis or the major and minor axis.</li>
+            </ul>
+          </div>
+
+          <div class="step-by-step">
+            <p class="instruction-step"></p>
+          </div>
+        </div>
+
+
+        <!-- Start of Widget Canvas -->
+        <div class="widget-canvas">
+          <div class="left-column">
+            <canvas id="canvas" height="500px" width="500px"></canvas>
+          </div>
+          <div class="right-column">
+            <h2>Dimensions of the Ellipse</h2>
+
+            <div class="grouped-inputs">
+              <div class="semi-major-axis">
+
+                <img class="output-image" src="images/semi_major_axis.png" />
+
+                <div class="semi-major-axis-input">
+                  <label for="semi-major">
+                    <p><strong>Semi-Major Axis:</strong></p>
+                  </label>
+
+                  <input type="number" min="0" oninput="if(this.value == 0){this.value = ''}else{this.value = Math.abs(this.value)}" name="semi-major-axis" id="semi-major">
+                </div>
+              </div>
+
+              <div class="semi-minor-axis">
+
+                <img class="output-image" src="images/semi_minor_axis.png" />
+
+                <div class="semi-minor-axis-input">
+                  <label for="semi-minor">
+                    <p><strong>Semi-Minor Axis:</strong></p>
+                  </label>
+
+                  <input type="number" min="0" oninput="if(this.value == 0){this.value = ''}else{this.value = Math.abs(this.value)}" name="semi-minor-axis" id="semi-minor">
+                </div>
+              </div>
+            </div>
+
+            <div class="grouped-inputs">
+              <div class="major-axis">
+
+                <img class="output-image" src="images/major_axis.png" />
+
+                <div class="major-axis-input">
+                  <label for="major">
+                    <p><strong>Major Axis:</strong></p>
+                  </label>
+
+                  <input type="number" min="0" oninput="if(this.value == 0){this.value = ''}else{this.value = Math.abs(this.value)}" name="major-axis" id="major">
+
+                  <div class="workings">
+                    <p>= 2 &times; semi-major axis</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="minor-axis">
+
+                <img class="output-image" src="images/minor_axis.png" />
+
+                <div class="minor-axis-input">
+                  <label for="minor">
+                    <p><strong>Minor Axis:</strong></p>
+                  </label>
+
+                  <input type="number" min="0" oninput="if(this.value == 0){this.value = ''}else{this.value = Math.abs(this.value)}" name="minor-axis" id="minor">
+
+                  <div class="workings">
+                    <p>= 2 &times; semi-minor axis</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="area">
+
+              <img class="output-image" src="images/area_of_ellipse.png" />
+
+              <div class="area-input">
+                <label for="area">
+                  <p><strong>Area:</strong></p>
+                </label>
+
+                <input type="number" min="0" oninput="if(this.value == 0){this.value = ''}else{this.value = Math.abs(this.value)}" name="area" id="area">
+
+                <div class="workings">
+                  <p>= &pi; &times; semi-major axis &times; semi-minor axis</p>
+                </div>
+              </div>
+            </div>
+
+            <button class="clear-button gradient-background">Clear</button>
+          </div>
+        </div>
+        <!--End of Widget Canvas-->
+      </section>
+    </div>
+    <!--End of Widget Content-->
+  </div>
+  <!-- End of Main Container -->
+</div>
+<!-- End of Container -->
+
+<script language="JavaScript" src="js/ellipse_geometry.js"></script>
+
+</body>
+
+</html>

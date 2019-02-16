@@ -1,0 +1,980 @@
+
+* {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p{
+  font-family: 'Lato', sans-serif;
+  padding: 0.5em;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #444;
+}
+h1 {
+  font-size: 1.7em;
+}
+h2 {
+  font-size: 1.4em;
+}
+
+
+ul {
+  list-style: disc;
+  margin-left: 2em;
+}
+li {
+  font-family: 'Lato', sans-serif;
+  padding: 0.5em 0;
+}
+li:last-of-type {
+  border-bottom: none;
+}
+a {
+  color: #2193b0;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+img {
+  margin-top: 0.5em;
+  max-width: 100%;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  background-color: #2193b0;
+  color: white;
+  font-weight: bold;
+
+}
+th,td {
+  border: 1px solid black;
+  padding: 0.5em;
+  font-family: 'Lato', sans-serif;
+  text-align: left;
+}
+header {
+  align-items: flex-end;
+  display: flex;
+  flex-wrap: wrap;
+  height: 8em;
+  justify-content: space-between;
+  padding: 1em;
+  width: 100%;
+}
+form {
+  display: inline;
+  padding: 0.5em 0;
+}
+input[type=search] {
+  background: #f9fbff;
+  border: solid 1px #ece9e6;
+  border-radius: 1em;
+  font: 1em 'Lato', sans-serif;
+  padding: 0.4em;
+
+  -webkit-transition: width 1.5s ease;
+  -moz-transition: width 1.5s ease;
+  -o-transition: width 1.5s ease;
+  transition: width 1.5s ease;
+}
+input[type=search]:focus {
+  width: 12.5em;
+}
+input[type=button] {
+  background: #2193b0;
+  background: -webkit-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Standard syntax */
+  font: bold 1em 'Lato', sans-serif;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+section {
+  overflow: auto;
+  padding: 0.5em 1em;
+}
+footer {
+  background-color: #2193b0;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font: 1.2em 'Lato', sans-serif;
+  height: 50px;
+  justify-content: space-between;
+  padding: 0.5em;
+  position: fixed;
+  width: 100%;
+}
+
+/*Header CSS*/
+.gradient-background {
+  background: #2193b0;
+  background: -webkit-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Standard syntax */
+}
+.logo-image {
+  margin: 0;
+}
+.header-icons {
+  color: white;
+  display: inline;
+  font-size: 2em;
+}
+.header-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font: bold 0.6em 'Lato', sans-serif;
+  padding: 10px;
+}
+.header-link {
+  color: white;
+}
+.header-link:hover {
+  text-decoration: none;
+}
+.search-bar-min-width {
+  width: 5.5em;
+}
+.search-bar-max-width {
+  width: 12.5em;
+}
+.search-results {
+  background: white;
+  border: 5px solid #6dd5ed;
+  display: none;
+  font: 1em 'Lato', sans-serif;
+  padding: 1em;
+  width: 100%;
+}
+.search-result-link {
+  display: block;
+
+}
+
+/*Navigation CSS*/
+.nav {
+  border: 1px solid #c8c8c8;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.hide-nav {
+  display: none;
+}
+.drop-down {
+  position: relative;
+  width: calc(100% / 9);
+}
+.drop-down-button {
+  background: #6dd5ed;
+  color: #444;
+  font: bold 1em 'Lato', sans-serif;
+  height: 100%;
+  padding: 0.5em;
+  width: 100%;
+}
+.drop-down-button:hover {
+  background: url(../images/background_3.png) 0 0 repeat, #f9fbff;
+}
+.drop-down-content {
+  background: #6dd5ed;
+  display: none;
+  font: bold 1em 'Lato', sans-serif;
+  list-style-type: none;
+  margin-left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.drop-down:hover .drop-down-content {
+  display: block;
+  z-index: 1;
+}
+.drop-down-list:hover {
+  background: #2193b0;
+}
+.drop-down-link {
+  color: #444;
+}
+.drop-down-link:hover {
+  color: white;
+}
+
+/*Formatting*/
+.text-centred {
+  text-align: center;
+}
+.right-align {
+  align: right;
+}
+.display-block {
+  display: block;
+}
+.sub-section {
+  border-bottom: 2px solid #f9f9f9;
+  margin-left: 1em;
+}
+.sub-section:last-of-type {
+  border-bottom: none;
+}
+.no-border {
+  border: none;
+}
+.red-text {
+  color: red;
+}
+.half-width {
+  width: 50%;
+}
+
+/*Container CSS*/
+.container {
+  background: url(../images/background.png) 0 0 repeat, #f9fbff;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: hidden; /* necessary to hide collapsed sidebar */
+  position: relative;
+}
+
+/*Curriculum CSS*/
+.curriculum {
+  background: rgb(100, 100, 100);
+  color: white;
+  width: 17.5%;
+
+  -webkit-transition: margin 1.5s ease;
+  -moz-transition: margin 1.5s ease;
+  -o-transition: margin 1.5s ease;
+  transition: margin 1.5s ease;
+}
+.curriculum-title {
+  color: #aaa;
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+.curriculum-section {
+  color: white;
+  font-style: italic;
+  text-decoration: underline;
+
+}
+.curriculum-bar {
+  list-style: none inside;
+  margin-left: 0;
+}
+.curriculum-button {
+  align-items: center;
+  border-bottom: 1px solid #c8c8c8;
+  display: flex;
+  height: 100px;
+  padding: 1em;
+}
+
+
+.curriculum-button-off {
+  align-items: center;
+  border-bottom: 1px solid #c8c8c8;
+  display: flex;
+  height: 100px;
+  padding: 1em;
+  background: #6dd5ed;
+}
+
+.curriculum-button:first-of-type {
+  border-top: 1px solid #c8c8c8;
+}
+.curriculum-button:last-of-type {
+  border-bottom: 1px solid #c8c8c8;
+}
+.curriculum-button:hover {
+  background: rgb(150, 150, 150);
+  font-weight: bold;
+}
+.curriculum-link {
+  color: white;
+  font-size: 1.1em;
+}
+.collapsed {
+  display: block;
+  margin-left: -17.5%;
+}
+.collapse {
+  color: #2193b0;
+  font-size: 2em;
+  padding: 0.1em 0 0 0.1em;
+  width: 2.5%;
+}
+.hidden {
+  display: none !important;
+}
+
+/*Main Container CSS*/
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  -webkit-transition: width 1.5s ease;
+  -moz-transition: width 1.5s ease;
+  -o-transition: width 1.5s ease;
+  transition: width 1.5s ease;
+}
+.min-width {
+  width: 80%;
+}
+.max-width {
+  width: 97.5%;
+}
+
+/*Content CSS*/
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  padding-bottom: 50px;
+}
+
+/*Main Content CSS*/
+.main-content {
+  background-color: white;
+  box-shadow: 0 0 2em #ddd;
+  width: 65%;
+}
+
+/*Dictionary and Questions*/
+.dictionary, .question {
+  background: #ece9e6;
+  background: -webkit-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #ece9e6, #f9f9f9); /* Standard syntax */
+  border-radius: 2em;
+  box-shadow: 0.5em 0.5em 0.3em #ddd;
+  padding: 1em;
+  margin: 1em;
+}
+
+/*Steps*/
+.step {
+  border-bottom: 2px solid #f9f9f9;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2em 0;
+}
+.step-num {
+  width: 15%;
+}
+.circle-background {
+  background: #6dd5ed;
+  background: -webkit-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #2193b0, #6dd5ed);  /*For Opera 11.1 to 12.0*/
+  background: -moz-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #2193b0, #6dd5ed); /* Standard syntax */
+  border-radius: 50%;
+  color: white;
+  font: normal 2em 'Fredericka the Great', sans-serif;
+  height: 2.5em;
+  padding: 0.5em;
+  width: 2.5em;
+
+  /*Centre number in circle*/
+  display:-ms-flexbox;
+  -ms-flex-pack:center;
+  -ms-flex-align:center;
+
+  /* Firefox */
+  display:-moz-box;
+  -moz-box-pack:center;
+  -moz-box-align:center;
+
+  /* Safari, Opera, and Chrome */
+  display:-webkit-box;
+  -webkit-box-pack:center;
+  -webkit-box-align:center;
+
+  /* W3C */
+  display:box;
+  box-pack:center;
+  box-align:center;
+}
+.step-words {
+  width: 85%;
+}
+.workings {
+  background: #f9f9f9;
+  border: none;
+  border-radius: 0.8em;
+  display: block;
+  font-size: 1.1em;
+  margin: 1em;
+  padding: 0.2em;
+  word-wrap: break-word;
+}
+.workings-grid {
+  background: #f9f9f9;
+  border-radius: 0.8em;
+  margin: 1em;
+  width: calc(100% - 2em);
+}
+.workings-grid-left, .workings-grid-right, .workings-grid-left-extra{
+  border: none;
+  padding: 1em;
+}
+.workings-grid-left {
+  font-size: 1.1em;
+  width: 40%;
+}
+.workings-grid-right {
+  font-size: 1em;
+}
+.workings-grid-left-extra {
+  font-size: 1.1em;
+  width: 50%;
+}
+
+/*Slider*/
+.slider {
+  background: url(../images/background_2.png) 0 0 repeat, #6dd5ed;
+  background: url(../images/background_2.png) 0 0 repeat, -webkit-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Safari 5.1 to 6.0 */
+  background: url(../images/background_2.png) 0 0 repeat, -o-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Opera 11.1 to 12.0 */
+  background: url(../images/background_2.png) 0 0 repeat, -moz-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Firefox 3.6 to 15 */
+  background: url(../images/background_2.png) 0 0 repeat, linear-gradient(135deg, #2193b0, #6dd5ed); /* Standard syntax */
+  color:  white;
+  font-size: 1.2em;
+  padding: 1em 1em 2em 1em;
+}
+.slider-title {
+  color: white;
+  font-family: 'Fredericka the Great', sans-serif;
+  font-weight: normal;
+}
+.slider-text-link {
+  color: white;
+  font-weight: bold;
+}
+.slider-link {
+  display: none;
+}
+
+/*Slide show*/
+.slider-container {
+  margin: auto;
+  max-width: 1000px;
+  position: relative;
+}
+.slide {
+  align-items: 'center';
+  display: none;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.slider-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+  padding: 1em 0 0 0;
+  text-align: center;
+}
+.slider-image {
+  align-self: center;
+  border: 5px solid white;
+}
+.slider-number {
+  font-family: 'Lato', sans-serif;
+  font-size: 0.9em;
+  text-align: center;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*Left and right arrows*/
+.previous, .next {
+  border-radius: 0 3px 3px 0;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: -22px;
+  padding: 16px;
+  position: absolute;
+  top: 50%;
+  width: auto;
+
+  transition: 0.6s ease;
+}
+.next {
+  border-radius: 3px 0 0 3px;
+  right: 0;
+}
+.previous:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/*Dots*/
+.dots {
+  margin: 1em 0 0 0;
+  text-align: center;
+}
+.dot {
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin: 0 2px;
+  width: 15px;
+
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #c8c8c8;
+}
+
+/*See Also CSS*/
+.see-also {
+  background: #ece9e6;
+  background: -webkit-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #ece9e6, #f9f9f9); /* Standard syntax */
+}
+.see-also-link {
+  color: black;
+  display: block;
+  margin: 0.5em;
+}
+
+/*Sidebar Content CSS*/
+.sidebar-content {
+  background: rgba(44, 44, 44, 0.5);
+  padding: 1em;
+  width: 35%;
+}
+
+/*Widget CSS*/
+.widget {
+  background-color: white;
+  border-radius: 1em;
+  color: black;
+  font: 1em 'Lato', sans-serif;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+
+/*Test Content CSS*/
+.maths-test {
+  background-color: white;
+  border-radius: 1em;
+  color: black;
+  font: 1em 'Lato', sans-serif;
+  padding: 1em;
+}
+.test-link {
+  color: white;
+}
+#score {
+  display: inline-block;
+  padding: 0.2em;
+  margin-bottom: 1em;
+}
+.scorer {
+  background: #ece9e6;
+  border-radius: 100%;
+  display: inline-block;
+  height: 30px;
+  margin: 10px 10px 0 0;
+  width: 30px;
+}
+.correct {
+  background: #00ff00;
+}
+.wrong {
+  background: #ff0000;
+}
+.small {
+  font-size: 0.8em;
+}
+.clearer {
+  clear: both;
+}
+.cursq {
+  display: block;
+  background: #ece9e6;
+  background: -webkit-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #ece9e6, #f9f9f9); /* Standard syntax */
+  border: 1px solid #ece9e6;
+  border-radius: 1em;
+  cursor: pointer;
+  margin: 15px;
+  padding: 10px;
+}
+.cursno {
+  display: block;
+  background: #ece9e6;
+  background: -webkit-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(135deg, #ece9e6, #f9f9f9); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(135deg, #ece9e6, #f9f9f9); /* Standard syntax */
+  border: 1px solid #ece9e6;
+  border-radius: 1em;
+  margin: 15px;
+  padding: 10px;
+}
+.cursright {
+  display: block;
+  background: #00ff00;
+  border: 1px solid #ece9e6;
+  border-radius: 1em;
+  margin: 15px;
+  padding: 10px;
+}
+.curswrong {
+  display: block;
+  background: #ff0000;
+  border: 1px solid #ece9e6;
+  border-radius: 1em;
+  margin: 15px;
+  padding: 10px;
+}
+.myprintarea {
+  background: url(../images/background.png) 0 0 repeat, #f9fbff;
+  display: none;
+  justify-content: center;
+}
+.print-test-area {
+  background: white;
+  box-shadow: 0 0 2em #ddd;
+  font: 1em 'Lato', sans-serif;
+  max-width: 1200px;
+  padding: 1em;
+  width: 80%;
+}
+#pques0,
+#pques1,
+#pques2,
+#pques3,
+#pques4,
+#pques5 {
+  display: block;
+  margin: 2em 0 2em 0;
+  width: 100%;
+}
+
+/*Additional Test CSS*/
+.full-width {
+  width: 100%;
+}
+.main-test-content {
+  background-color: white;
+  box-shadow: 0 0 2em #ddd;
+  width: 80%;
+}
+/*Notes Content CSS*/
+.teachers-note {
+  background-color: white;
+  border-radius: 1em;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+.teachers-note:last-of-type {
+  margin-bottom: none;
+}
+
+/*Footer CSS*/
+.previous-lesson {
+  text-align: left;
+}
+.next-lesson {
+  text-align: right;
+}
+.previous-lesson-title, .next-lesson-title {
+  color: inherit;
+  font-weight: bold;
+}
+.previous-lesson-link, .next-lesson-link {
+  color: inherit;
+}
+
+/*Parent Pages CSS
+
+/*Curriculum Banner CSS*/
+.curriculum-banner {
+  margin: 2em 0 0 0;
+  width: 100%;
+}
+.curriculum-banner-title {
+  font-family: 'Fredericka the Great', sans-serif;
+  font-weight: normal;
+  font-size: 2em;
+  text-align: center;
+}
+
+/*Mini-Curriculum CSS*/
+.mini-curriculum {
+  border-radius: 1em;
+  box-shadow: 0 0 0.5em #ddd;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 1em;
+  padding: 0;
+}
+.mini-curriculum-title {
+  background: url(../images/background_2.png) 0 0 repeat, #6dd5ed;
+  background: url(../images/background_2.png) 0 0 repeat, -webkit-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Safari 5.1 to 6.0 */
+  background: url(../images/background_2.png) 0 0 repeat, -o-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Opera 11.1 to 12.0 */
+  background: url(../images/background_2.png) 0 0 repeat, -moz-linear-gradient(135deg, #2193b0, #6dd5ed); /* For Firefox 3.6 to 15 */
+  background: url(../images/background_2.png) 0 0 repeat, linear-gradient(135deg, #2193b0, #6dd5ed); /* Standard syntax */
+  color: white;
+  font-family: 'Fredericka the Great', sans-serif;
+  font-size: 1.8em;
+  font-weight: lighter;
+  width: 100%;
+}
+.mini-curriculum-intro {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.mini-curriculum-intro-image {
+  width: 25%;
+}
+.mini-curriculum-intro-text {
+  padding: 1em;
+  text-align: justify;
+  width: 75%;
+}
+.mini-curriculum-link {
+  padding: 0 0 0 0.5em;
+}
+
+/*Expand Button CSS*/
+.expand-button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: #2193b0;
+  font-size: 1em;
+  margin: 0 2em 1em 0;
+  text-transform: uppercase;
+}
+.expand-icon, .collapse-icon {
+  font-size: 1.5em;
+}
+.hide-icon {
+  display: none;
+}
+.mini-curriculum-expanded {
+  overflow: hidden;
+  padding: 1em;
+
+  -webkit-transition: height 1.5s ease;
+  -moz-transition: height 1.5s ease;
+  -o-transition: height 1.5s ease;
+  transition: height 1.5s ease;
+}
+.no-height {
+  height: 0;
+}
+.full-height {
+  height: 100%;
+}
+
+/*Sidebar Curriculum CSS*/
+.sidebar-curriculum {
+  padding: 1em;
+  width: 35%;
+}
+
+/*Curriculum Content CSS*/
+.curriculum-content {
+  border-radius: 1em;
+  box-shadow: 0 0 2em #ddd;
+  color: white;
+  padding: 1em 1em 2.5em 1em;
+  margin-bottom: 1em;
+}
+.curriculum-content:last-of-type {
+  margin-bottom: none;
+}
+.curriculum-sidebar-title {
+  color: white;
+}
+.curriculum-sidebar-link-container {
+  padding: 0 0 0 0.5em;
+}
+.curriculum-sidebar-link {
+  color: white;
+}
+.curriculum-sidebar-link-bullet {
+  padding: 0;
+}
+
+/*Terms and Definitions CSS*/
+
+/*Alphabet Bar CSS*/
+.alphabet {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 1.5em 0 1.5em 0;
+  width: 100%;
+}
+.alphabet-button {
+  background: #ece9e6;
+  border-radius: 100%;
+  color: black;
+  height: 30px;
+  padding-top: 5px;
+  text-align: center;
+  width: 30px;
+}
+
+/*Alphabet Section CSS*/
+.alphabet-section-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.alphabet-letter {
+  font: 2em 'Fredericka the Great', sans-serif;
+}
+.glossary-link {
+  color: black;
+}
+
+/*Search Page CSS*/
+.search-content {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 2em #ddd;
+  min-height: 600px;
+  padding: 1em 1em 50px 1em;
+  width: 65%;
+}
+
+/*Home Page CSS*/
+
+/*Home Content*/
+.home-content {
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 2em #ddd;
+  padding: 1em 1em 50px 1em;
+  width: 65%;
+}
+
+/*Curriculum Boxes*/
+.curriculum-box-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  perspective: 2000px;
+  -webkit-perspective: 2000px;
+}
+.curriculum-box {
+  position: relative;
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: 1s;
+  -webkit-transition: 1s;
+}
+.front, .back {
+  align-items: center;
+  border-radius: 1em;
+  box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 15em;
+  margin: 1em;
+  width: 15em;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.front {
+  justify-content: flex-start;
+  position: absolute;
+
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+.back {
+  background: #02ccba;
+  justify-content: center;
+  padding: 1em;
+
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+.open {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+.curriculum-box-title {
+  color: white;
+  font-family: 'Fredericka the Great', sans-serif;
+  font-weight: normal;
+}
+.curriculum-box-text {
+  color: white;
+}
+.curriculum-box-image {
+  border-radius: 0.5em;
+}
+.curriculum-box-links {
+  list-style-type: none;
+  margin-left: 0;
+}
+.curriculum-box-link {
+  border-bottom: 1px solid #f9f9f9;
+}
+.curriculum-box-link:last-of-type {
+  border-bottom: none;
+}
+.curriculum-box-link-text {
+  color: white;
+  font-family: 'Fredericka the Great', sans-serif;
+  font-size: 1.4em;
+}
