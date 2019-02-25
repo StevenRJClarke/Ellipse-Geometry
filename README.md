@@ -13,9 +13,9 @@ The geometry of the ellipse is shown to the user; the semi-major and semi-minor 
 
 Alternatively, the user can enter sufficient dimensions for the ellipse and the application will calculate the others. Sufficient dimensions are:
 
-* <u>both</u> the lengths of the semi-major <u>and</u> semi-minor axes
+* both the lengths of the semi-major and semi-minor axes
 
-* <u>both</u> the lengths of the major <u>and</u> minor axes
+* both the lengths of the major and minor axes
 
 ## Installation and Getting Started
 
